@@ -9,9 +9,11 @@ import { TestingModule } from './modules/testing/testing.module.ts';
 import { APP_FILTER } from '@nestjs/core';
 import { AllHttpExceptionsFilter } from './core/exeptions/filters/all-exceptions.filter.ts';
 import { DomainHttpExceptionsFilter } from './core/exeptions/filters/domain-exceptions.filter.ts';
+import { ConfigModuleRoot } from './dynamic-config-module.ts';
 
 @Module({
   imports: [
+    ConfigModuleRoot,
     DatabaseModule,
     UserAccountsModule,
     BloggersPlatformModule,

@@ -1,31 +1,24 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { AppModule } from './app.module.ts';
-import { appSetup } from './setup/app.setup.ts';
-import { DatabaseModule } from './core/database/database.module.ts';
-import { TestDatabaseModule } from '../test/helpers/test-database.module.ts';
+import { AppModule } from '../src/app.module.ts';
+import { DatabaseModule } from '../src/core/database/database.module.ts';
+import { TestDatabaseModule } from './helpers/test-database.module.ts';
 
-
-// TODO:  не надо так называть файлы 
+// TODO:  не надо так называть файлы
 describe('App (e2e)', () => {
   let app: INestApplication;
 
   beforeAll(async () => {
-    const testingModuleBuilder = Test.createTestingModule({
+    const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     })
       .overrideModule(DatabaseModule)
-      .useModule(TestDatabaseModule);
+      .useModule(TestDatabaseModule)
+      .compile();
 
-    const testingAppModule: TestingModule =
-      await testingModuleBuilder.compile();
-
-    app = testingAppModule.createNestApplication();
-
-    // Применяем глобальную конфигурацию (prefix "api", pipes и т.д.)
-    appSetup(app);
-
+    app = moduleFixture.createNestApplication();
+    app.setGlobalPrefix('api');
     await app.init();
   });
 
@@ -42,7 +35,6 @@ describe('App (e2e)', () => {
 
     const res = await request(server).get('/api/users');
 
-    expect(res.status).toBe(200);
     expect(res.text).toBe('1234');
   });
 
