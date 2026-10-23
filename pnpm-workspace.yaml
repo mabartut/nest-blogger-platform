@@ -1,0 +1,6 @@
+allowBuilds:
+  '@parcel/watcher': true
+  '@scarf/scarf': false
+  bcrypt: true
+  unrs-resolver: true
+  mongodb-memory-server: true

@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Name, NameSchema } from './name.schema';
+import { Name, NameSchema } from './name.schema.ts';
 import { HydratedDocument, Model } from 'mongoose';
-import { CreateUserDomainDto } from './dto/create-user.domain.dto';
+import { CreateUserDomainDto } from './dto/create-user.domain.dto.ts';
 
 export const loginConstraints = {
   minLength: 3,

@@ -1,4 +1,4 @@
-import { UserDocument } from '../../../users/domain/user.entity';
+import { UserDocument } from '../../../users/domain/user.entity.ts';
 
 export class MeViewDto {
   login: string;

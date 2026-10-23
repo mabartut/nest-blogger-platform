@@ -1,4 +1,4 @@
-import { PostDocument } from '../../domain/post.entity';
+import { PostDocument } from '../../domain/post.entity.ts';
 
 export class PostViewDto {
   id: string;

@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { CreatePostDomainDto } from './dto/create-post.domain.dto';
+import { CreatePostDomainDto } from './dto/create-post.domain.dto.ts';
 import { HydratedDocument, Model } from 'mongoose';
-import { UpdatePostDomainDto } from './dto/update-post.domain.dto';
+import { UpdatePostDomainDto } from './dto/update-post.domain.dto.ts';
 
 @Schema({ timestamps: true })
 export class Post {

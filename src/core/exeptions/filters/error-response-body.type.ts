@@ -1,5 +1,5 @@
-import { DomainExceptionCode } from '../domain-exception-code';
-import { Extension } from '../domain-exeptions';
+import { DomainExceptionCode } from '../domain-exception-code.ts';
+import { Extension } from '../domain-exeptions.ts';
 
 export type ErrorResponseBody = {
   timestamp: string;

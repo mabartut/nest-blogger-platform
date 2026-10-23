@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { CreateBlogDomainDto } from './dto/create-blog.domain.dto';
+import { CreateBlogDomainDto } from './dto/create-blog.domain.dto.ts';
 import { HydratedDocument, Model } from 'mongoose';
-import { UpdateBlogDomainDto } from './dto/update-blog.domain.dto';
+import { UpdateBlogDomainDto } from './dto/update-blog.domain.dto.ts';
 
 @Schema({ timestamps: true })
 export class Blog {

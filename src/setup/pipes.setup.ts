@@ -1,7 +1,7 @@
 import { INestApplication, ValidationPipe } from '@nestjs/common';
-import { errorFormatter } from '../core/exeptions/error-formatter';
-import { DomainException } from '../core/exeptions/domain-exeptions';
-import { DomainExceptionCode } from '../core/exeptions/domain-exception-code';
+import { errorFormatter } from '../core/exeptions/error-formatter.ts';
+import { DomainException } from '../core/exeptions/domain-exeptions.ts';
+import { DomainExceptionCode } from '../core/exeptions/domain-exception-code.ts';
 
 export function pipesSetup(app: INestApplication) {
   app.useGlobalPipes(

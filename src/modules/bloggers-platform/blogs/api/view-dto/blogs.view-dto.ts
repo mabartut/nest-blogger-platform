@@ -1,4 +1,4 @@
-import { BlogDocument } from '../../domain/blog.entity';
+import { BlogDocument } from '../../domain/blog.entity.ts';
 
 export class BlogViewDto {
   id: string;

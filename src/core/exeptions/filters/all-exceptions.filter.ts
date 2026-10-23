@@ -6,8 +6,8 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-import { ErrorResponseBody } from './error-response-body.type';
-import { DomainExceptionCode } from '../domain-exception-code';
+import { ErrorResponseBody } from './error-response-body.type.ts';
+import { DomainExceptionCode } from '../domain-exception-code.ts';
 
 @Catch()
 export class AllHttpExceptionsFilter implements ExceptionFilter {

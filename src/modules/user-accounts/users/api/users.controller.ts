@@ -9,12 +9,12 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
-import { UsersService } from '../application/users.service';
-import { UsersQueryRepository } from '../infrastructure/query/users.query-repository';
-import { CreateUserInputDto } from './input-dto/users.input-dto';
-import { GetUsersQueryParams } from './input-dto/get-users-query-params.input-dto';
-import { PaginatedViewDto } from '../../../../core/dto/base.paginated.view-dto';
-import { UserViewDto } from './view-dto/users.view-dto';
+import { UsersService } from '../application/users.service.ts';
+import { UsersQueryRepository } from '../infrastructure/query/users.query-repository.ts';
+import { CreateUserInputDto } from './input-dto/users.input-dto.ts';
+import { GetUsersQueryParams } from './input-dto/get-users-query-params.input-dto.ts';
+import { PaginatedViewDto } from '../../../../core/dto/base.paginated.view-dto.ts';
+import { UserViewDto } from './view-dto/users.view-dto.ts';
 
 // @ApiBasicAuth()
 // @UseGuards(BasicAuthGuard)

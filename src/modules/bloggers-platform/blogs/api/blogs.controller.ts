@@ -10,21 +10,21 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { BlogsService } from '../application/blogs.service';
-import { BlogsQueryRepository } from '../infrastructure/query/blogs.query-repository';
+import { BlogsService } from '../application/blogs.service.ts';
+import { BlogsQueryRepository } from '../infrastructure/query/blogs.query-repository.ts';
 import {
   CreateBlogInputDto,
   UpdateBlogInputDto,
-} from './input-dto/blogs.input-dto';
-import { GetBlogsQueryParams } from './input-dto/get-blogs-query-params.input-dto';
-import { BlogViewDto } from './view-dto/blogs.view-dto';
-import { PaginatedViewDto } from '../../../../core/dto/base.paginated.view-dto';
-import { GetPostsQueryParams } from '../../posts/api/input-dto/get-posts-query-params.input-dto';
-import { PostViewDto } from '../../posts/api/view-dto/posts.view-dto';
-import { PostsQueryRepository } from '../../posts/infrastructure/query/posts.query-repository';
-import { CreatePostInputDto } from '../../posts/api/input-dto/posts.input-dto';
-import { PostsService } from '../../posts/application/posts.service';
-import { BlogsRepository } from '../infrastructure/blogs.repository';
+} from './input-dto/blogs.input-dto.ts';
+import { GetBlogsQueryParams } from './input-dto/get-blogs-query-params.input-dto.ts';
+import { BlogViewDto } from './view-dto/blogs.view-dto.ts';
+import { PaginatedViewDto } from '../../../../core/dto/base.paginated.view-dto.ts';
+import { GetPostsQueryParams } from '../../posts/api/input-dto/get-posts-query-params.input-dto.ts';
+import { PostViewDto } from '../../posts/api/view-dto/posts.view-dto.ts';
+import { PostsQueryRepository } from '../../posts/infrastructure/query/posts.query-repository.ts';
+import { CreatePostInputDto } from '../../posts/api/input-dto/posts.input-dto.ts';
+import { PostsService } from '../../posts/application/posts.service.ts';
+import { BlogsRepository } from '../infrastructure/blogs.repository.ts';
 
 @Controller('blogs')
 export class BlogsController {

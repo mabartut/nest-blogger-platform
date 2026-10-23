@@ -1,5 +1,5 @@
 import { ValidationError } from '@nestjs/common';
-import { Extension } from './domain-exeptions';
+import { Extension } from './domain-exeptions.ts';
 
 export const errorFormatter = (
   errors: ValidationError[],

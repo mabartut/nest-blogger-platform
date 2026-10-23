@@ -6,14 +6,14 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { ExtractUserIdFromRequest } from '../guards/decorators/param/extract-userId-from-request.decorator';
-import { LocalAuthGuard } from '../guards/local/local-auth.guard';
-import { LoginViewDto } from './view-dto/login.view-dto';
-import { AuthService } from '../apllication/auth.service';
+import { ExtractUserIdFromRequest } from '../guards/decorators/param/extract-userId-from-request.decorator.ts';
+import { LocalAuthGuard } from '../guards/local/local-auth.guard.ts';
+import { LoginViewDto } from './view-dto/login.view-dto.ts';
+import { AuthService } from '../apllication/auth.service.ts';
 import { ApiBearerAuth, ApiBody } from '@nestjs/swagger';
-import { JwtAuthGuard } from '../guards/bearer/jwt-auth.guard';
-import { MeViewDto } from './view-dto/me.view-dto';
-import { AuthQueryRepository } from '../infrastructure/query/auth.query-repository';
+import { JwtAuthGuard } from '../guards/bearer/jwt-auth.guard.ts';
+import { MeViewDto } from './view-dto/me.view-dto.ts';
+import { AuthQueryRepository } from '../infrastructure/query/auth.query-repository.ts';
 
 @Controller('auth')
 export class AuthController {

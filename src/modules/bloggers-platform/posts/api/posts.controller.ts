@@ -10,15 +10,15 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { PostsService } from '../application/posts.service';
-import { PostsQueryRepository } from '../infrastructure/query/posts.query-repository';
+import { PostsService } from '../application/posts.service.ts';
+import { PostsQueryRepository } from '../infrastructure/query/posts.query-repository.ts';
 import {
   CreatePostInputDto,
   UpdatePostInputDto,
-} from './input-dto/posts.input-dto';
-import { GetPostsQueryParams } from './input-dto/get-posts-query-params.input-dto';
-import { PostViewDto } from './view-dto/posts.view-dto';
-import { PaginatedViewDto } from '../../../../core/dto/base.paginated.view-dto';
+} from './input-dto/posts.input-dto.ts';
+import { GetPostsQueryParams } from './input-dto/get-posts-query-params.input-dto.ts';
+import { PostViewDto } from './view-dto/posts.view-dto.ts';
+import { PaginatedViewDto } from '../../../../core/dto/base.paginated.view-dto.ts';
 
 @Controller('posts')
 export class PostsController {

@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Blog, BlogSchema } from './blogs/domain/blog.entity';
-import { BlogsController } from './blogs/api/blogs.controller';
-import { Post, PostSchema } from './posts/domain/post.entity';
-import { PostsController } from './posts/api/posts.controller';
-import { PostsQueryRepository } from './posts/infrastructure/query/posts.query-repository';
-import { PostsService } from './posts/application/posts.service';
-import { PostsRepository } from './posts/infrastructure/posts.repository';
-import { BlogsService } from './blogs/application/blogs.service';
-import { BlogsRepository } from './blogs/infrastructure/blogs.repository';
-import { BlogsQueryRepository } from './blogs/infrastructure/query/blogs.query-repository';
+import { Blog, BlogSchema } from './blogs/domain/blog.entity.ts';
+import { BlogsController } from './blogs/api/blogs.controller.ts';
+import { Post, PostSchema } from './posts/domain/post.entity.ts';
+import { PostsController } from './posts/api/posts.controller.ts';
+import { PostsQueryRepository } from './posts/infrastructure/query/posts.query-repository.ts';
+import { PostsService } from './posts/application/posts.service.ts';
+import { PostsRepository } from './posts/infrastructure/posts.repository.ts';
+import { BlogsService } from './blogs/application/blogs.service.ts';
+import { BlogsRepository } from './blogs/infrastructure/blogs.repository.ts';
+import { BlogsQueryRepository } from './blogs/infrastructure/query/blogs.query-repository.ts';
 
 @Module({
   imports: [

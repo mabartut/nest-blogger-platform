@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import type { UserDocument, UserModelType } from '../domain/user.entity';
-import { User } from '../domain/user.entity';
+import type { UserDocument, UserModelType } from '../domain/user.entity.ts';
+import { User } from '../domain/user.entity.ts';
 import type { QueryFilter } from 'mongoose';
 
 @Injectable()

@@ -1,11 +1,11 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import type { BlogModelType } from '../domain/blog.entity';
-import { Blog } from '../domain/blog.entity';
-import { BlogsRepository } from '../infrastructure/blogs.repository';
-import { CreateBlogDto } from './dto/create-blog.dto';
-import { UpdateBlogDto } from './dto/update-blog.dto';
-import { PostsRepository } from '../../posts/infrastructure/posts.repository';
+import type { BlogModelType } from '../domain/blog.entity.ts';
+import { Blog } from '../domain/blog.entity.ts';
+import { BlogsRepository } from '../infrastructure/blogs.repository.ts';
+import { CreateBlogDto } from './dto/create-blog.dto.ts';
+import { UpdateBlogDto } from './dto/update-blog.dto.ts';
+import { PostsRepository } from '../../posts/infrastructure/posts.repository.ts';
 
 @Injectable()
 export class BlogsService {
